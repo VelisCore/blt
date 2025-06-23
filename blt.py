@@ -5,14 +5,16 @@ from debloat import core
 
 def main():
     console = Console()
-    console.print(Panel.fit(
-        "[bold cyan]:rocket: BLT - Windows Debloater Tool :rocket:[/bold cyan]\n"
-        "[green]Vereint 40+ Windows-Optimierungen - Schnell & Sicher![/green]",
-        box=box.ROUNDED,
-        padding=(1, 4),
-        subtitle="by YourName",
-        title="blt",
-    ))
+    console.print(
+        Panel.fit(
+            "[bold cyan]:rocket: BLT – Windows Debloater Tool :rocket:[/bold cyan]\n"
+            "[green]Vereint über 10 Windows-Optimierungen – schnell und sicher![/green]",
+            box=box.ROUNDED,
+            padding=(1, 4),
+            subtitle="by Velis",
+            title="BLT",
+        )
+    )
 
     core.main_menu(console)
 

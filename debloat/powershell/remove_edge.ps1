@@ -20,12 +20,10 @@ public class Win32 {
 }
 "@
 
-# Optional: hide console in silent mode
 if ($Silent) {
     [Win32]::ShowWindowAsync((Get-Process -Id $PID).MainWindowHandle, 0)
 }
 
-# Define uninstall paths
 $setupExe = "$PSScriptRoot\setup.exe"
 
 function Run-EdgeUninstall {
@@ -134,10 +132,8 @@ function Final-Cleanup {
     Remove-Item "C:\Program Files (x86)\Microsoft\EdgeUpdate" -Recurse -Force -ErrorAction SilentlyContinue
 }
 
-# === Execution ===
-
 if (-not $Silent) {
-    Write-Host "`n===> Starte Microsoft Edge Entfernung..."
+    Write-Host "`n===> Starting Microsoft Edge removal..."
 }
 
 Run-EdgeUninstall
@@ -151,6 +147,6 @@ Remove-EdgeExecutables
 Final-Cleanup
 
 if (-not $Silent) {
-    Write-Host "`n✅ Microsoft Edge wurde (soweit möglich) entfernt."
+    Write-Host "`n✅ Microsoft Edge has been removed (as far as possible)."
     Start-Sleep -Seconds 3
 }
