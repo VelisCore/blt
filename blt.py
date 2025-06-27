@@ -11,7 +11,7 @@ def main():
             "[green]Vereint über 10 Windows-Optimierungen – schnell und sicher![/green]",
             box=box.ROUNDED,
             padding=(1, 4),
-            subtitle="by Velis",
+            subtitle="by Velyzo",
             title="BLT",
         )
     )
